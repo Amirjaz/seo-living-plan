@@ -29,19 +29,10 @@ This skill makes Claude run the plan with discipline, every week, without being 
 
 ## How it works
 
-```mermaid
-flowchart TD
-    K["🔍 Keyword session — mid-week, read-only<br/>keywords · rivals · site health"] -->|"Actions for the weekly run"| R1
-    subgraph W["📋 Weekly run"]
-        direction TB
-        R1["🩺 Reachability, as Googlebot sees it"] --> M["📊 Measure: 7 d vs 7 d + 28 d<br/>scorecard · fail list · drop alerts"]
-        M --> J["⚖️ Judge changes due at +14 / +28 days"]
-        J --> D["🛠️ Do the week's work, within autonomy"]
-        D --> L["📝 Log · revise the plan ≤ 3 · learn ≤ 2"]
-    end
-    L --> Rep["📨 Report + your queue, sized to your hours"]
-    L -.->|"lessons.md"| K
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/how-it-works-dark.svg">
+  <img alt="A mid-week keyword session hands actions to the weekly run: reachability, measure, judge, act, log and learn. Every change is re-measured at +14 and +28 days. The run writes a report and your queue, and lessons.md feeds the next week on every site." src="docs/how-it-works-light.svg" width="100%">
+</picture>
 
 ## A weekly run, in brief
 
