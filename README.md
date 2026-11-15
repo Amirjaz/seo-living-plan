@@ -27,6 +27,22 @@ This skill makes Claude run the plan with discipline, every week, without being 
 - 🧠 **A plan that learns.** At most 3 evidence-backed revisions a week, plus a lessons file shared across all your sites. It comes seeded with 29 lessons from the field.
 - 🤝 **Respect for the owner.** Prices, hours and medical claims come only from them. Stuck questions go out as one message of 3 yes/no answers.
 
+## How it works
+
+```mermaid
+flowchart TD
+    K["🔍 Keyword session — mid-week, read-only<br/>keywords · rivals · site health"] -->|"Actions for the weekly run"| R1
+    subgraph W["📋 Weekly run"]
+        direction TB
+        R1["🩺 Reachability, as Googlebot sees it"] --> M["📊 Measure: 7 d vs 7 d + 28 d<br/>scorecard · fail list · drop alerts"]
+        M --> J["⚖️ Judge changes due at +14 / +28 days"]
+        J --> D["🛠️ Do the week's work, within autonomy"]
+        D --> L["📝 Log · revise the plan ≤ 3 · learn ≤ 2"]
+    end
+    L --> Rep["📨 Report + your queue, sized to your hours"]
+    L -.->|"lessons.md"| K
+```
+
 ## A weekly run, in brief
 
 From a test run on a made-up dental practice in Leeds:
