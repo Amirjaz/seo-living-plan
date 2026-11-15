@@ -58,8 +58,9 @@
 <text x="800" y="196" font-size="14" font-weight="700" text-anchor="middle" fill="#1F2328">Log &amp; learn</text>
 <text x="800" y="216" font-size="11" text-anchor="middle" fill="#59636E">≤ 3 plan revisions</text>
 <text x="800" y="231" font-size="11" text-anchor="middle" fill="#59636E">≤ 2 lessons</text>
-<path d="M680,251 C680,280 560,280 560,255" fill="none" stroke="#C4613F" stroke-width="1.6" marker-end="url(#ml)"/>
-<text x="620" y="289" font-size="11" font-weight="600" text-anchor="middle" fill="#C4613F">every change re-measured</text>
+<path d="M680,251 V265 Q680,273 672,273 H568 Q560,273 560,265 V259" fill="none" stroke="#C4613F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M560,252 L554.5,260.5 L565.5,260.5 Z" fill="#C4613F" stroke="#C4613F" stroke-width="1" stroke-linejoin="round"/>
+<text x="620" y="288" font-size="11" font-weight="600" text-anchor="middle" fill="#C4613F">every change re-measured</text>
 <path d="M800,251 V312" fill="none" stroke="#1A7F37" stroke-width="1.6"/>
 <path d="M395,312 H800" fill="none" stroke="#1A7F37" stroke-width="1.6"/>
 <line x1="395" y1="312" x2="395" y2="326" stroke="#1A7F37" stroke-width="1.6" marker-end="url(#mg)"/>
