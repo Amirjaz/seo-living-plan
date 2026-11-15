@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: weekly-run-dental-practice
+expected_outcome: |
+  A week-4 run: the report and a new Weekly log entry use the 7 days ending 2026-11-13; the
+  2026-10-12 implant change gets its +28 verdict (worked, 9.8 -> 7.1); the 10-20 laminate change is
+  not given a +28 verdict (due 11-18); a drop alert for «دندانپزشکی پونک» leaving the top 3; the
+  404 from the keyword session is handled first (as a package, no site access); the waiting N2
+  draft becomes a direct yes/no question to the human with its age and approved_by_doctor stays
+  empty; the stuck Paziresh24 and Neshan items are bundled into one message of at most 3 yes/no
+  questions; at most 3 plan revisions with evidence; weeks 2-3 log entries unchanged.
+context:
+  scaffold_script: place-files.sh

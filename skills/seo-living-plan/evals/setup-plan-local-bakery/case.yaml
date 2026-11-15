@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: setup-plan-local-bakery
+expected_outcome: |
+  A quarter plan file for the bakery built from the exports: decisions (KPI, 2 h budget, autonomy,
+  brand terms, facts owner), a baseline that ends on the latest complete day (2026-11-13, since
+  11-14 is partial), a ranking strategy whose levers cite numbers, a 13-week table from 2026-12-01,
+  empty Weekly log / Change log / Plan revisions / Proposals sections, and a keyword tracker with
+  intents. Prices, hours and allergens are routed to the owner. The reachability check is reported
+  honestly.
+context:
+  scaffold_script: place-files.sh

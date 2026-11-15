@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: judge-change-verdict
+expected_outcome: |
+  Verdict: worked, because CTR rose about 58 % at a similar position (8.4 -> 7.9 is within 1
+  position), not because of a ranking gain. The H2 rewrite is fine (more than 14 days since the
+  last change), with the verdict recorded first and a new change-log entry with a fresh 28-day
+  baseline and +14 / +28 rechecks.
