@@ -33,19 +33,19 @@ You write a great quarterly plan. Then:
 An excerpt from a [real test run](examples/weekly-report-dental-practice.md) (made-up dental practice, synthetic Search Console data):
 
 ```text
-# Ava Dental — week 4 · ۲۴ آبان ۱۴۰۵ (2026-11-15)
+# Ava Dental — week 4 · 2026-11-15 (۲۴ آبان ۱۴۰۵)
 blocked: site reachability check — no network access from this workspace. Last known
 result (11-12): DNS ok · Googlebot 200. This is NOT a pass for this week.
 
 Alerts:
-- DROP — «دندانپزشکی پونک» left the top 3: 2.8 → 4.1 on 140 impressions.
-- 404: /blog/کامپوزیت-یا-لمینت/ since 11-10 (had 64 impressions). Fix packaged.
+- DROP: tracked keyword "دندانپزشکی پونک" left the top 3 (2.8 → 4.1, 140 impressions).
+- 404 since 11-10 on the composite-vs-laminate blog post (had 64 impressions). Fix packaged.
 
 Fail list (not in the top 3, ≥ 20 impressions / 28 d):
-1. «قیمت لمینت دندان» · 24.5 — skipped: a price range is a fact; unblocks when the doctor
-   gives it in writing.
-2. «دندانپزشکی پونک» · 4.1 — drop alert. Homepage title package this week.
-4. «لمینت دندان پونک» · 11.2 — skipped: +28 recheck due 11-18, page stays unchanged.
+1. pos 24.5 · "قیمت لمینت دندان" — skipped: a price range is a fact; unblocks when
+   the doctor gives it in writing.
+2. pos 4.1 · "دندانپزشکی پونک" — drop alert. Homepage title package this week.
+4. pos 11.2 · "لمینت دندان پونک" — skipped: +28 recheck due 11-18, page stays unchanged.
 
 Verdicts:
 - Implant title + H1 (10-12), +28 → worked: 9.8 → 7.1, CTR 1.4 → 3.8 %, 236 impr.
@@ -112,14 +112,17 @@ A low-volume keyword went 25 → 10.4 in a week with no change to the page, then
 ## How it works
 
 ```mermaid
-flowchart LR
-    K["🔍 Keyword session<br/>mid-week · read-only<br/>keywords · rivals · health"] -->|"Actions for the weekly run"| W
-    W["📋 Weekly run"] --> R1["🩺 Googlebot-eye<br/>reachability"]
-    R1 --> M["📊 Measure<br/>7 d vs 7 d + 28 d<br/>scorecard · fail list"]
-    M --> J["⚖️ Judge changes<br/>due at +14 / +28"]
-    J --> D["🛠️ Do the week's work<br/>within autonomy"]
-    D --> L["📝 Log · revise ≤ 3<br/>learn ≤ 2"]
-    L --> Rep["📨 Report +<br/>your queue"]
+flowchart TD
+    K["🔍 Keyword session — mid-week, read-only<br/>keywords · rivals · site health"] -->|"Actions for the weekly run"| R1
+    subgraph W["📋 Weekly run"]
+        direction TB
+        R1["🩺 Reachability, as Googlebot sees it"] --> M["📊 Measure: 7 d vs 7 d + 28 d<br/>scorecard · fail list · drop alerts"]
+        M --> J["⚖️ Judge changes due at +14 / +28 days"]
+        J --> D["🛠️ Do the week's work, within autonomy"]
+        D --> L["📝 Log · revise the plan ≤ 3 · learn ≤ 2"]
+    end
+    L --> Rep["📨 Report + your queue, sized to your hours"]
+    L -.->|"lessons.md"| K
 ```
 
 Each site has **one plan file** (decisions, ranking strategy, a 13-week table, then a Weekly log, a Change log, Plan revisions and Proposals), a **keyword tracker** and a **rivals file**. **One `lessons.md`** is shared across all your sites.
@@ -179,7 +182,7 @@ skills/seo-living-plan/
 │   ├── ranking-playbook.md     levers A–H, from push zone to ecommerce
 │   ├── site-checks.md          Googlebot-eye reachability + stack-specific traps
 │   ├── field-lessons.md        29 lessons from seven live sites
-│   └── regional-notes.md       Iran: no Google Business Profile, Neshan/Balad, «مطب» vs «کلینیک»
+│   └── regional-notes.md       Iran: no Google Business Profile, Neshan/Balad, clinic vs practice
 ├── assets/                     lessons · keyword-tracker · rivals templates
 ├── scripts/gsc_compare.py      the arithmetic, done the same way every time
 └── evals/                      3 test cases (claude plugin eval format)
@@ -202,7 +205,7 @@ python scripts/gsc_compare.py verdict --base-pos 8.4 --base-ctr 1.2 --new-pos 7.
 #  → worked — CTR +58 % at a similar position (8.4 → 7.9)
 ```
 
-It handles Persian keyword spellings too: «بابا حاجی» and «باباحاجی», ي and ی, ك and ک, and half-spaces all match the same tracked keyword.
+It handles Persian keyword spellings too. Spacing variants like `بابا حاجی` / `باباحاجی`, the Arabic and Persian forms of ی and ک, and half-spaces all match the same tracked keyword.
 
 ## FAQ
 
