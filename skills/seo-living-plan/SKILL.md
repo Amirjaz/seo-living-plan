@@ -22,7 +22,7 @@ Per site (keep them together in the site's workspace; ask where they live if you
 | `keyword-watch/<YYYY-MM-DD>.md` | Mid-week keyword session reports |
 | `data/<YYYY-MM-DD>/` | Raw Search Console rows per run — append-only, never overwritten |
 
-Shared across all sites: **`lessons.md`** — what happened on one site that is likely to hold on others. Templates for the tracker, rivals and lessons files are in `assets/`. Market specifics (e.g. Iran, where Google Business Profile isn't available) are in `references/regional-notes.md`.
+Shared across all sites: **`lessons.md`** — what happened on one site that is likely to hold on others. Templates for the tracker, rivals and lessons files are in `assets/`. Market specifics — other search engines, countries without Google Business Profile, local directories, right-to-left languages — are in `references/regional-notes.md`.
 
 ## Pick the mode
 
@@ -51,7 +51,7 @@ These carry the method. Each exists because skipping it produced a wrong call on
 
 **5. Stay inside the autonomy level; propose the rest.** The plan states what runs may change on their own (reorder weeks, swap a topic for one with better evidence, refill queues, re-rank levers). Anything touching the KPI, budget, quarter dates, site rules, or *facts* — prices, hours, phone, credentials, medical or legal claims, product specs — goes to **Proposals** for the human. Facts come only from the owner, never from a competitor or a guess. Approval fields (e.g. `approved_by:`) are filled only by the human who got the approval.
 
-**6. Size the human's queue to their time budget.** Everything that needs the human or the client becomes a queue item with a minute estimate, most valuable first, within the weekly hours in the plan. A drafted outreach or listing does nothing until it is sent — track a "sent on" date. When two or more asks have waited 14+ days, replace them with **one ready-to-forward message of at most 3 yes/no questions**, addressed straight to the person who decides.
+**6. Size the human's queue to their time budget.** Everything that needs the human or the client becomes a queue item with a minute estimate, most valuable first, within the weekly hours in the plan. A drafted outreach or listing does nothing until it is sent — track a "sent on" date. When two or more asks have waited 14+ days, replace them with **one ready-to-forward message of at most 3 yes/no questions**, addressed straight to the person who decides. Ready to forward means no blanks: state each item's age in its question, and if you don't know the sender's name, leave the signature off rather than writing a placeholder.
 
 **7. Never end a run without a file.** If a step is blocked (no data access, a CAPTCHA, a failing script), still write the report with a first line `blocked: <step> — <reason>`, do every part that doesn't depend on it, and say what unblocks it. A run with no file is a failure even if it "succeeded".
 
@@ -69,7 +69,7 @@ Use whatever route the user has, in this order of preference: a Search Console c
 
 ```bash
 python scripts/gsc_compare.py window  --daily daily.csv              # latest complete day + the windows
-python scripts/gsc_compare.py compare --cur q-cur.csv --prev q-prev.csv --brand "acme,اکمی" --tracked keyword-tracker.md --q28 q-28d.csv
+python scripts/gsc_compare.py compare --cur q-cur.csv --prev q-prev.csv --brand "acme,acme co" --tracked keyword-tracker.md --q28 q-28d.csv
 python scripts/gsc_compare.py verdict --base-pos 8.4 --base-ctr 1.2 --new-pos 7.9 --new-ctr 1.9 --impressions 230
 ```
 

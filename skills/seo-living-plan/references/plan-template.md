@@ -5,7 +5,7 @@
 Ask only for what you can't find. Most of this is in the workspace or Search Console.
 
 - **Site and type** — e.g. `local-business`, `medical`, `ecommerce`, `saas`, `publisher`. The type decides which lessons and levers apply.
-- **Quarter dates** — 12–13 weeks. Use the calendar the owner uses (Gregorian, Jalali…) and give ISO dates alongside.
+- **Quarter dates** — 12–13 weeks. If the owner plans in a local calendar, use it and give ISO dates alongside.
 - **KPI** — one measurable outcome tied to the business: commercial-intent clicks, leads, bookings, non-brand impressions. Not "rankings" in general.
 - **Human time budget** — hours per week the human (you or the client) can spend on approvals, reviews and messages.
 - **Autonomy level** — what runs may do alone: e.g. *read-only* (reports and drafts only), *drafts + non-fact fixes* (internal links, schema, alt text, titles), or *publish approved content*. Write it down; every run checks it.
